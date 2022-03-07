@@ -1,0 +1,17 @@
+.photo-gallery__list {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 22px;
+  border-top: solid 1px $form-element-hover-color;
+  margin: 0;
+}
+
+.photo-gallery__item {
+  padding-bottom: 15px;
+  border-bottom: solid 1px $form-element-hover-color;
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

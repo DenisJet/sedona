@@ -1,0 +1,14 @@
+.social__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social__link {
+  background-color: $basic-blue;
+  display: flex;
+  width: 46px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+}

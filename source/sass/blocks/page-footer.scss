@@ -1,0 +1,11 @@
+.page-footer {
+  padding-top: 29px;
+}
+
+.page-footer__title {
+  @include font (bold, 21px, 26px, $basic-black);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 34px;
+}

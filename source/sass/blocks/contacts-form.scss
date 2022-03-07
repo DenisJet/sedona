@@ -1,0 +1,27 @@
+.contacts-form {
+  padding-bottom: 28px;
+  border-bottom: solid 1px $form-element-hover-color;
+}
+
+.contacts-form__legend {
+  margin-bottom: 17px;
+}
+
+.contacts-form__field {
+  margin-top: 0;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:nth-child(2) .contacts-form__label {
+    padding-left: 22px;
+    margin-bottom: 8px;
+  }
+
+  &:nth-child(3) .contacts-form__label {
+    padding-left: 21px;
+    margin-bottom: 5px;
+  }
+}

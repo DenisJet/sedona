@@ -1,0 +1,5 @@
+.copyright__text {
+  @include font(normal, 14px, 26px, $basic-black);
+  text-transform: uppercase;
+  margin: 0;
+}

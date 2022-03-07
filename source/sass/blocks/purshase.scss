@@ -1,0 +1,15 @@
+.purshase__title {
+  @include font(bold, 21px, 26px, $basic-black);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.purshase__text {
+  @include font(normal, 14px, 21px, $light-black);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 27px;
+}

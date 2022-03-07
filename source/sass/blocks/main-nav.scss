@@ -1,0 +1,16 @@
+.main-nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__link {
+  @include font(bold, 18px, 40px, $basic-white);
+  background-color: $basic-blue;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  display: block;
+}

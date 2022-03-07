@@ -1,0 +1,23 @@
+.photo-item__image {
+  margin-bottom: 11px;
+}
+
+.photo-item__title {
+  @include font(bold, 14px, 24px, $basic-black);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.photo-item__author {
+  @include font(normal, 14px, 24px, $basic-black);
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.photo-item__likes {
+  @include font(bold, 14px, 24px, $basic-black);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}

@@ -1,0 +1,14 @@
+.header__title {
+  @include font(bold, 18px, 26px, $basic-black);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.header__text {
+  @include font(normal, 14px, 26px, $light-black);
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+}

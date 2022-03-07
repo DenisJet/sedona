@@ -1,0 +1,21 @@
+.video-item {
+  position: relative;
+  padding-bottom: 65px;
+}
+
+.video-item__controls {
+  position: absolute;
+  width: 100%;
+  height: 110px;
+  top: 155px;
+}
+
+.video-item__bar {
+  height: 45px;
+  background-color: transparentize($basic-black, 0.6);
+}
+
+.video-item__buttons {
+  height: 65px;
+  background-color: $form-element-basic-color;
+}

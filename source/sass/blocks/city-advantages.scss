@@ -1,0 +1,22 @@
+.city-advantages__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.city-advantages__item:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.city-advantages__title {
+  @include font(bold, 18px, 26px, $basic-black);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.city-advantages__text {
+  @include font(normal, 14px, 21px, $light-black);
+  text-transform: uppercase;
+  margin: 0;
+}

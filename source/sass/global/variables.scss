@@ -1,0 +1,32 @@
+// Colors
+
+$basic-black: #000000;
+$light-black: #333333;
+
+$basic-gray: #eeeeee;
+$dark-gray: #d6d6d6;
+
+$basic-blue: #81b3d2;
+
+$basic-white: #ffffff;
+
+$main-menu-active-color: #766357;
+$main-menu-active-hover-color: #604e43;
+
+$button-hover-color: #669ec0;
+$button-down-color: #5496bd;
+
+$form-element-basic-color: #f2f2f2;
+$form-element-hover-color: #e5e5e5;
+$form-element-down-color: #d5d5d5;
+
+$mobile-video-controls-color: #5c6870;
+$desktop-video-controls-background-color: #666666;
+
+@mixin font($f-weight, $f-size, $l-height, $color) {
+  font-family: "PT Sans", "Arial", "Helvetica", sans-serif;
+  font-weight: $f-weight;
+  font-size: $f-size;
+  line-height: $l-height;
+  color: $color;
+}

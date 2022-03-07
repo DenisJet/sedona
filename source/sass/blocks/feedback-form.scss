@@ -1,0 +1,17 @@
+.feedback-form__legend {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.feedback-form__textarea {
+  @include font (bold, 18px, 26px, $basic-black);
+
+  &::placeholder {
+    @include font (bold, 18px, 26px, $basic-black);
+  }
+
+  background-color: $form-element-basic-color;
+  border: none;
+  padding: 15px 22px 27px 22px;
+  width: 280px;
+}

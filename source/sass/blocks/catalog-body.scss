@@ -1,0 +1,21 @@
+.catalog-body__header {
+  position: relative;
+  padding-bottom: 214px;
+  margin-bottom: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 214px;
+    background-image: url("../../img/header-form-triangle-mobile.svg"),
+      url("../../img/header-image-text-form-mobile.svg"),
+      url("../../img/header-image-form-mobile.jpg");
+    background-position: center bottom, center center, center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.catalog-body__main {
+  margin-bottom: 50px;
+}

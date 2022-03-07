@@ -1,0 +1,29 @@
+.index-body__header {
+  position: relative;
+  padding-bottom: 385px;
+  margin-bottom: 32px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 385px;
+    background-image: url("../../img/header-reasons-triangle-mobile.svg"),
+      url("../../img/header-image-text-reasons-mobile.svg"),
+      url("../../img/header-image-reasons-mobile.jpg");
+    background-position: center bottom, center center, center center;
+    background-repeat: no-repeat;
+  }
+}
+
+.index-body__reasons {
+  margin-bottom: 33px;
+}
+
+.index-body__purshase {
+  margin-bottom: 50px;
+}
+
+.index-body__main {
+  margin-bottom: 10px;
+}
