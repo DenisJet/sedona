@@ -1,5 +1,11 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
 .copyright__text {
   @include font(normal, 14px, 26px, $basic-black);
   text-transform: uppercase;
   margin: 0;
+  margin-right: 10px;
 }

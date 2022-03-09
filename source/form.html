@@ -8,15 +8,12 @@
     <title>HTML Academy: Sedona</title>
   </head>
 
-  <body class="form-body wraper-mobile">
+  <body class="form-body wraper">
     <header class="page-header form-body__header">
       <a class="page-header__logo" href="index.html">
-        <img
-          src="img/logotype-mobile.svg.svg"
-          width="102"
-          height="84"
-          alt="City of Sedona"
-        />
+        <img class="page-header__logo--mobile" src="img/logotype-mobile.svg" width="102" height="84" alt="City of Sedona"/>
+        <img class="page-header__logo--tablet" src="img/logotype-tablet.svg.svg" width="102" height="84" alt="City of Sedona"/>
+        <img class="page-header__logo--desktop" src="img/logotype-desktop.svg" width="187" height="97" alt="City of Sedona"/>
       </a>
       <nav class="main-nav page-header__nav">
         <button class="main-nav__toggle" type="button">
@@ -33,11 +30,7 @@
             <a class="main-nav__link">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
-            <a
-              class="main-nav__link"
-              href="https://htmlacademy.ru/intensive/adaptive"
-              >HTML Academy</a
-            >
+            <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -198,9 +191,10 @@
               placeholder="Опишите подробно все свои восторги"
             ></textarea>
           </div>
-          <button class="button form-review__button" type="submit">
+          <button class="button form__button" type="submit">
             Отправить отзыв
           </button>
+          <p class="form__note">* — обязательные поля</p>
         </form>
       </section>
     </main>

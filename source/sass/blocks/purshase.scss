@@ -1,3 +1,15 @@
+.purshase__wrap {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 458px;
+  }
+}
+
 .purshase__title {
   @include font(bold, 21px, 26px, $basic-black);
   text-transform: uppercase;

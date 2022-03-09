@@ -1,3 +1,8 @@
+.index-body {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .index-body__header {
   position: relative;
   padding-bottom: 385px;
@@ -8,6 +13,8 @@
     position: absolute;
     width: 320px;
     height: 385px;
+    left: 50%;
+    transform: translate(-50%, 0);
     background-image: url("../../img/header-reasons-triangle-mobile.svg"),
       url("../../img/header-image-text-reasons-mobile.svg"),
       url("../../img/header-image-reasons-mobile.jpg");
@@ -18,12 +25,20 @@
 
 .index-body__reasons {
   margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .index-body__purshase {
   margin-bottom: 50px;
-}
 
-.index-body__main {
-  margin-bottom: 10px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 66px;
+  }
 }

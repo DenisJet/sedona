@@ -1,3 +1,10 @@
+.form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .form__item {
   padding: 0;
   border: none;
@@ -10,8 +17,20 @@
     margin-bottom: 20px;
   }
 
+  &:nth-child(2),
+  &:nth-child(4),
+  &:nth-child(5) {
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / -1;
+    }
+  }
+
   &:nth-child(3) {
     margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
   }
 
   &:nth-child(5) {
@@ -23,4 +42,15 @@
   @include font(bold, 18px, 26px, $basic-black);
   text-transform: uppercase;
   text-align: center;
+}
+
+.form__note {
+  @include font(normal, 14px, 26px, $light-black);
+  text-transform: uppercase;
+  text-align: end;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

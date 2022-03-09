@@ -8,6 +8,8 @@
     position: absolute;
     width: 320px;
     height: 214px;
+    left: 50%;
+    transform: translate(-50%, 0);
     background-image: url("../../img/header-form-triangle-mobile.svg"),
       url("../../img/header-image-text-form-mobile.svg"),
       url("../../img/header-image-form-mobile.jpg");

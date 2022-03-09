@@ -1,0 +1,37 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__logo {
+  position: absolute;
+  left: 50%;
+  top: 223px;
+  transform: translate(-50%, 0);
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+
+  &--mobile {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (min-width: $tablet-width)and(max-width: $tablet-max-width) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}

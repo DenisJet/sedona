@@ -1,7 +1,26 @@
+.main-nav {
+  position: relative;
+}
+
 .main-nav__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.main-nav__item:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    padding-right: 102px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 187px;
+  }
 }
 
 .main-nav__link {
@@ -13,4 +32,17 @@
   padding-top: 10px;
   padding-bottom: 5px;
   display: block;
+
+  @media (min-width: $tablet-width) {
+    @include font(bold, 14px, 26px, $basic-black);
+    background-color: $basic-white;
+    padding: 0;
+    padding-bottom: 14px;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

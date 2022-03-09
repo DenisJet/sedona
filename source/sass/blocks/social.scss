@@ -2,6 +2,12 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 6px;
 }
 
 .social__link {

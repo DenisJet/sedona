@@ -8,10 +8,12 @@
     <title>HTML Academy: Sedona</title>
   </head>
 
-  <body class="index-body wraper-mobile">
+  <body class="index-body wraper">
     <header class="page-header index-body__header">
       <a class="page-header__logo">
-        <img src="img/logotype-mobile.svg.svg" width="102" height="84" alt="City of Sedona"/>
+        <img class="page-header__logo--mobile" src="img/logotype-mobile.svg" width="102" height="84" alt="City of Sedona"/>
+        <img class="page-header__logo--tablet" src="img/logotype-tablet.svg.svg" width="102" height="84" alt="City of Sedona"/>
+        <img class="page-header__logo--desktop" src="img/logotype-desktop.svg" width="187" height="97" alt="City of Sedona"/>
       </a>
       <nav class="main-nav page-header__nav">
         <button class="main-nav__toggle" type="button">
@@ -41,22 +43,24 @@
         <header class="header reasons__header">
           <h2 class="visually-hidden">Причины выбрать Седону</h2>
           <p class="header__title">
-            Седона — небольшой<br> городок в Аризоне, Заслуживающий большего!
+            Седона — небольшой городок в Аризоне, Заслуживающий большего!
           </p>
           <p class="header__text">
-            Рассмотрим 5 причин, по которым<br> Седона круче, чем гранд каньон!
+            Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!
           </p>
         </header>
         <ul class="reasons__list">
           <li class="reasons__item">
             <div class="reasons__wrap reasons__wrap--blue">
-              <h3 class="reasons__title reasons__title--white">
-                Настоящий городок
-              </h3>
-              <p class="reasons__number reasons__number--white">– №1 –</p>
-              <p class="reasons__text reasons__text--white">
-                Седона не атракцион для туристов, там течёт своя жизнь
-              </p>
+              <div class="reasons__description">
+                <h3 class="reasons__title reasons__title--white">
+                  Настоящий городок
+                </h3>
+                <p class="reasons__number reasons__number--white">– №1 –</p>
+                <p class="reasons__text reasons__text--white">
+                  Седона не атракцион для туристов, там течёт своя жизнь
+                </p>
+              </div>
             </div>
             <div class="city-advantages">
               <h4 class="visually-hidden">Преимущества городка</h4>
@@ -84,17 +88,19 @@
           </li>
           <li class="reasons__item">
             <div class="reasons__wrap reasons__wrap--blue">
-              <h3 class="reasons__title reasons__title--white">
-                Там есть мост дьявола
-              </h3>
-              <p class="reasons__number reasons__number--white">– №2 –</p>
-              <p class="reasons__text reasons__text--white">
-                Да, по нему можно пройти! Если вы осмелитесь, конечно
-              </p>
+              <div class="reasons__description">
+                <h3 class="reasons__title reasons__title--white">
+                  Там есть мост дьявола
+                </h3>
+                <p class="reasons__number reasons__number--white">– №2 –</p>
+                <p class="reasons__text reasons__text--white">
+                  Да, по нему можно пройти! Если вы осмелитесь, конечно
+                </p>
+              </div>
             </div>
           </li>
           <li class="reasons__item">
-            <div class="reasons__wrap reasons__wrap--gray container-mobile">
+            <div class="reasons__wrap reasons__wrap--gray">
               <h3 class="reasons__title reasons__title">
                 Небольшая площадь
               </h3>
@@ -105,7 +111,7 @@
             </div>
           </li>
           <li class="reasons__item">
-            <div class="reasons__wrap reasons__wrap--gray container-mobile">
+            <div class="reasons__wrap reasons__wrap--gray">
               <h3 class="reasons__title reasons__title">
                 Красивая дорога
               </h3>
@@ -116,7 +122,7 @@
             </div>
           </li>
           <li class="llist__item reasons__item">
-            <div class="reasons__wrap reasons__wrap--gray container-mobile">
+            <div class="reasons__wrap reasons__wrap--gray">
               <h3 class="reasons__title reasons__title">
                 Мало туристов
               </h3>
@@ -131,12 +137,14 @@
 
       <section class="purshase index-body__purshase">
         <h2 class="visually-hidden">Найти гостиницу</h2>
+        <div class="purshase__wrap">
         <p class="purshase__title">Заинтересовались?</p>
         <p class="purshase__text">
           Укажите предпологаемые даты поездки, и мы покажем вам лучшие
           предложения гостиниц в Седоне
         </p>
         <a class="button purshase__button" href="#">Найти гостиницу</a>
+        </div>
       </section>
 
       <section class="map index-body__map">
