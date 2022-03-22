@@ -1,28 +1,82 @@
 .form-body {
-  margin-top: 0;
-  margin-bottom: 0;
+  min-width: 320px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: $form-element-basic-color;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
 }
 
 .form-body__header {
-  position: relative;
-  padding-bottom: 214px;
   margin-bottom: 36px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 214px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background-image: url("../../img/header-form-triangle-mobile.svg"),
-      url("../../img/header-image-text-form-mobile.svg"),
-      url("../../img/header-image-form-mobile.jpg");
-    background-position: center bottom, center center, center center;
-    background-repeat: no-repeat;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 114px;
+  }
+}
+
+.form-body__image {
+  width: 100%;
+  min-height: 160px;
+  background-color: $basic-blue;
+  background-image: url("../../img/header-form-triangle-mobile.svg"),
+    url("../../img/header-image-form-mobile.jpg");
+  background-position: center bottom, center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 295px;
+    background-image: url("../../img/header-form-triangle-tablet.svg"),
+      url("../../img/header-image-form-teablet.jpg");
+    background-size: auto;
+  }
+}
+
+.form-body__image-title {
+  margin-top: 54px;
+  margin-bottom: 67px;
+
+  &--mobile {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      margin-top: 100px;
+      margin-bottom: 120px;
+    }
   }
 }
 
 .form-body__main {
-  margin-bottom: 48px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: 960px) {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 65px;
+  }
 }

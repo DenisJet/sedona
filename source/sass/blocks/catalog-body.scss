@@ -1,23 +1,78 @@
-.catalog-body__header {
-  position: relative;
-  padding-bottom: 214px;
-  margin-bottom: 24px;
+.catalog-body {
+  height: 100%;
+  margin: 0 auto;
+  background-color: $form-element-basic-color;
+  min-width: 320px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 320px;
-    height: 214px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background-image: url("../../img/header-form-triangle-mobile.svg"),
-      url("../../img/header-image-text-form-mobile.svg"),
-      url("../../img/header-image-form-mobile.jpg");
-    background-position: center bottom, center center, center center;
-    background-repeat: no-repeat;
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
+  }
+}
+
+.catalog-body__image {
+  width: 100%;
+  min-height: 160px;
+  background-color: $basic-blue;
+  background-image: url("../../img/header-form-triangle-mobile.svg"),
+    url("../../img/header-image-form-mobile.jpg");
+  background-position: center bottom, center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    min-height: 295px;
+    background-image: url("../../img/header-form-triangle-tablet.svg"),
+      url("../../img/header-image-form-teablet.jpg");
+    background-size: auto;
+  }
+}
+
+.catalog-body__image-title {
+  margin-top: 54px;
+  margin-bottom: 67px;
+
+  &--mobile {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      margin-top: 100px;
+      margin-bottom: 120px;
+    }
+  }
+}
+
+.catalog-body__header {
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 100px;
   }
 }
 
 .catalog-body__main {
   margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 85px;
+  }
 }

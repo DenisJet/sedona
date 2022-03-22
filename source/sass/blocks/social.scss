@@ -3,11 +3,12 @@
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
-.social__item:not(:last-child) {
-  margin-right: 6px;
+.social__item {
+  margin: 3px;
 }
 
 .social__link {

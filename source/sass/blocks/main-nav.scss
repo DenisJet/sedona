@@ -1,5 +1,124 @@
 .main-nav {
   position: relative;
+  padding-bottom: 56px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+  }
+}
+
+.main-nav__logo {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    top: 0;
+  }
+
+  &--mobile {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 23px;
+  bottom: 17px;
+  right: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 4px;
+  top: 0;
+  left: 0;
+  background-color: $basic-blue;
+  box-shadow: 0 9px 0 0 $basic-blue, 0 18px 0 0 $basic-blue;
+}
+
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: fade-out($color: $basic-blue, $amount: 0.4);
+  box-shadow: 0 9px 0 0 fade-out($color: $basic-blue, $amount: 0.4),
+    0 18px 0 0 fade-out($color: $basic-blue, $amount: 0.4);
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade-out($color: $basic-blue, $amount: 0.7);
+  box-shadow: 0 9px 0 0 fade-out($color: $basic-blue, $amount: 0.7),
+    0 18px 0 0 fade-out($color: $basic-blue, $amount: 0.7);
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 17px;
+  right: 20px;
+  z-index: 1;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 4px;
+    top: 11px;
+    left: 0;
+    background-color: $basic-white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade-out($color: $basic-white, $amount: 0.4);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade-out($color: $basic-white, $amount: 0.7);
+  }
+}
+
+.main-nav--closed .main-nav__list {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .main-nav__list {
@@ -10,16 +129,27 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__item {
+  @media (min-width: $tablet-width) {
+    width: 20%;
+  }
+
+  &:last-child .main-nav__link {
+    box-shadow: inset 0 -4px 5px $main-nav-shadow;
+
+    @media (min-width: $tablet-width) {
+      box-shadow: none;
+    }
   }
 }
 
 .main-nav__item:nth-child(2) {
   @media (min-width: $tablet-width) {
-    padding-right: 102px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-right: 187px;
+    margin-right: 20%;
   }
 }
 
@@ -32,17 +162,63 @@
   padding-top: 10px;
   padding-bottom: 5px;
   display: block;
+  position: relative;
+  border-bottom: solid 1px fade-out($color: $box-shadow, $amount: 0.8);
+  border-top: solid 1px fade-out($color: $basic-white, $amount: 0.8);
+
+  &:hover {
+    background-color: $button-hover-color;
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+      color: $basic-blue;
+    }
+  }
+
+  &:active {
+    background-color: $button-down-color;
+    color: fade-out($color: $basic-white, $amount: 0.7);
+
+    @media (min-width: $tablet-width) {
+      background-color: transparent;
+      color: fade-out($color: $basic-black, $amount: 0.7);
+    }
+  }
 
   @media (min-width: $tablet-width) {
     @include font(bold, 14px, 26px, $basic-black);
-    background-color: $basic-white;
+    background-color: transparent;
     padding: 0;
-    padding-bottom: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: none;
   }
 }
 
-.main-nav__toggle {
+.main-nav__link--active {
   @media (min-width: $tablet-width) {
-    display: none;
+    color: $main-menu-active-color;
+  }
+
+  &:hover {
+    @media (min-width: $tablet-width) {
+      color: $main-menu-active-hover-color;
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet-width) {
+      color: fade-out($color: $main-menu-active-color, $amount: 0.7);
+    }
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__list {
+  @media (max-width: $mobile-width-only) {
+    display: block;
   }
 }

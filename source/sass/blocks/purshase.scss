@@ -1,11 +1,11 @@
 .purshase__wrap {
   display: flex;
   flex-direction: column;
-  width: 280px;
+  padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: 458px) {
     width: 458px;
   }
 }
@@ -16,6 +16,11 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
 }
 
 .purshase__text {

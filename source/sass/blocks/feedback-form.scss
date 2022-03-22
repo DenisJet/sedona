@@ -1,6 +1,21 @@
+.feedback-form {
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    border-top: solid 1px $tablet-width-border-color;
+  }
+}
+
 .feedback-form__legend {
+  text-align: center;
   margin-top: 0;
   margin-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 55px;
+  }
 }
 
 .feedback-form__textarea {
@@ -13,5 +28,5 @@
   background-color: $form-element-basic-color;
   border: none;
   padding: 15px 22px 27px 22px;
-  width: 280px;
+  width: 100%;
 }

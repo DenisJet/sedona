@@ -1,15 +1,28 @@
 .login-form {
-  padding-bottom: 25px;
-  border-bottom: solid 1px $form-element-hover-color;
+  border: none;
 }
 
 .login-form__legend {
+  text-align: center;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    margin-bottom: 55px;
+  }
 }
 
 .login-form__field {
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 0;
   margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    text-align: left;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -17,13 +30,41 @@
 
   &:nth-child(2) .login-form__input {
     width: 230px;
+
+    @media (min-width: $tablet-width) {
+      width: 216px;
+    }
+
+    @media (min-width: 1040px) {
+      width: 350px;
+    }
   }
 
   &:nth-child(3) .login-form__input {
     width: 192px;
+
+    @media (min-width: $tablet-width) {
+      width: 178px;
+    }
+
+    @media (min-width: 1040px) {
+      width: 312px;
+    }
   }
 
   &:nth-child(4) .login-form__input {
     width: 194px;
+
+    @media (min-width: $tablet-width) {
+      width: 180px;
+    }
+
+    @media (min-width: 1040px) {
+      width: 314px;
+    }
   }
+}
+
+.login-form__label {
+  margin-right: 8px;
 }

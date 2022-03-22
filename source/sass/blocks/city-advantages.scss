@@ -1,6 +1,6 @@
 .city-advantages__list {
   list-style-type: none;
-  padding: 0;
+  padding: 35px 0;
   margin: 0;
 
   @media (min-width: $tablet-width) {
@@ -12,6 +12,10 @@
 
 .city-advantages__item:not(:last-child) {
   margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .city-advantages__title {
@@ -19,10 +23,84 @@
   text-transform: uppercase;
   margin-top: 0;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    font-size: 21px;
+  }
 }
 
 .city-advantages__text {
   @include font(normal, 14px, 21px, $light-black);
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+  }
+}
+
+.city-advantages__item {
+  position: relative;
+  padding-left: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-top: 100px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -10px;
+
+    @media (min-width: $tablet-width) {
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: 0;
+    }
+  }
+
+  &--housing::before {
+    width: 39px;
+    height: 37px;
+    background-image: url("../../img/city-advantages-housing-mobile.svg");
+
+    @media (min-width: $tablet-width) {
+      width: 75px;
+      height: 72px;
+      background-image: url("../../img/city-advantages-housing-tablet.svg");
+    }
+  }
+
+  &--souvenirs::before {
+    width: 32px;
+    height: 38px;
+    background-image: url("../../img/city-advantages-souvenirs-mobile.svg");
+
+    @media (min-width: $tablet-width) {
+      width: 64px;
+      height: 75px;
+      background-image: url("../../img/city-advantages-souvenirs-tablet.svg");
+    }
+  }
+
+  &--food::before {
+    width: 40px;
+    height: 35px;
+    background-image: url("../../img/city-advantages-food-mobile.svg");
+
+    @media (min-width: $tablet-width) {
+      width: 76px;
+      height: 68px;
+      top: 7px;
+      background-image: url("../../img/city-advantages-food-tablet.svg");
+    }
+  }
+}
+
+.city-advantages__item:last-child {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }

@@ -4,6 +4,10 @@
   text-align: center;
   margin-top: 0;
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .header__text {
@@ -11,4 +15,10 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+}
+
+.header__title br {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

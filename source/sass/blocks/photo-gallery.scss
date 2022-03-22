@@ -1,8 +1,6 @@
 .photo-gallery__list {
   list-style-type: none;
   padding: 0;
-  padding-top: 22px;
-  border-top: solid 1px $form-element-hover-color;
   margin: 0;
 
   @media (min-width: $tablet-width) {
@@ -16,17 +14,28 @@
 }
 
 .photo-gallery__item {
-  padding-bottom: 15px;
   border-bottom: solid 1px $form-element-hover-color;
   margin-bottom: 22px;
 
   &:first-child {
+    padding-top: 22px;
+    border-top: solid 1px $form-element-hover-color;
+
     @media (min-width: $tablet-width) {
       grid-column: 1 / -1;
+      padding-top: 0;
+      border: none;
     }
   }
 
   &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
     margin-bottom: 0;
   }
 }

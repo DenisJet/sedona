@@ -1,3 +1,26 @@
 .video-gallery__header {
+  max-width: 445px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 67px;
+  }
+}
+
+.video-gallery__header .header__title {
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
+}
+
+.video-gallery__item {
+  padding-bottom: 66px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+  }
 }
