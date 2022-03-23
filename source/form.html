@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>HTML Academy: Sedona</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="img/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#1b0c67" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
 
   <body class="form-body">
@@ -13,27 +20,24 @@
       <header class="form-body__header">
         <nav class="main-nav form-body__nav main-nav--closed main-nav--nojs">
           <a class="main-nav__logo" href="index.html">
-            <img
-              class="main-nav__logo--mobile"
-              src="img/logotype-mobile.svg"
-              width="102"
-              height="84"
-              alt="City of Sedona"
-            />
-            <img
-              class="main-nav__logo--tablet"
-              src="img/logotype-tablet.svg.svg"
-              width="102"
-              height="84"
-              alt="City of Sedona"
-            />
-            <img
-              class="main-nav__logo--desktop"
-              src="img/logotype-desktop.svg"
-              width="187"
-              height="97"
-              alt="City of Sedona"
-            />
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="img/logotype-desktop.svg"
+                width="187"
+                heigh="97"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/logotype-tablet.svg.svg"
+              />
+              <img
+                src="img/logotype-mobile.svg"
+                width="102"
+                height="84"
+                alt="City of Sedona"
+              />
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -58,20 +62,16 @@
           </ul>
         </nav>
         <div class="form-body__image">
-          <img
-            class="form-body__image-title form-body__image-title--mobile"
-            src="./img/header-image-text-form-mobile.svg"
-            width="229"
-            height="39"
-            alt="Седона"
-          />
-          <img
-            class="form-body__image-title form-body__image-title--tablet"
-            src="./img/header-image-text-form-tablet.svg"
-            width="460"
-            height="80"
-            alt="Седона"
-          />
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/header-image-text-form-tablet.svg" width="460" height="80">
+            <img
+              class="form-body__image-title"
+              src="./img/header-image-text-form-mobile.svg"
+              width="229"
+              height="39"
+              alt="Седона"
+            />
+          </picture>
         </div>
       </header>
 
@@ -109,7 +109,9 @@
                   />
                 </p>
                 <p class="field login-form__field">
-                  <label class="field__label login-form__label" for="surname">Фамилия*:</label>
+                  <label class="field__label login-form__label" for="surname"
+                    >Фамилия*:</label
+                  >
                   <input
                     class="field__input login-form__input"
                     type="text"
@@ -119,7 +121,9 @@
                   />
                 </p>
                 <p class="field login-form__field">
-                  <label class="field__label login-form__label" for="patronymic">Отчество:</label>
+                  <label class="field__label login-form__label" for="patronymic"
+                    >Отчество:</label
+                  >
                   <input
                     class="field__input login-form__input"
                     type="text"
@@ -163,14 +167,13 @@
             </div>
             <div class="form__item-wraper">
               <fieldset class="impression-form form__item">
-                <legend
-                  class="form__legend impression-form__legend"
-                >
+                <legend class="form__legend impression-form__legend">
                   Ваше общее впечатление:
                 </legend>
                 <ul class="impression-form__list">
                   <li class="impression-form__item">
-                    <input class="visually-hidden"
+                    <input
+                      class="visually-hidden"
                       type="radio"
                       name="overall-impression"
                       value="positive"
@@ -182,7 +185,8 @@
                     >
                   </li>
                   <li class="impression-form__item">
-                    <input class="visually-hidden"
+                    <input
+                      class="visually-hidden"
                       type="radio"
                       name="overall-impression"
                       value="negative"
@@ -193,7 +197,8 @@
                     >
                   </li>
                   <li class="impression-form__item">
-                    <input class="visually-hidden"
+                    <input
+                      class="visually-hidden"
                       type="radio"
                       name="overall-impression"
                       value="undefined"
@@ -208,14 +213,14 @@
             </div>
             <div class="form__item-wraper">
               <fieldset class="attractions-form form__item">
-                <legend
-                  class="form__legend attractions-form__legend"
-                >
-                  Посещенные<br> достопримечательности:
+                <legend class="form__legend attractions-form__legend">
+                  Посещенные<br />
+                  достопримечательности:
                 </legend>
                 <ul class="attractions-form__list">
                   <li class="attractions-form__item">
-                    <input class="visually-hidden"
+                    <input
+                      class="visually-hidden"
                       type="checkbox"
                       name="devils-bridge"
                       id="devils-bridge"
@@ -226,7 +231,8 @@
                     >
                   </li>
                   <li class="attractions-form__item">
-                    <input class="visually-hidden"
+                    <input
+                      class="visually-hidden"
                       type="checkbox"
                       name="bell-mountain"
                       id="bell-mountain"
@@ -237,7 +243,8 @@
                     >
                   </li>
                   <li class="attractions-form__item">
-                    <input class="visually-hidden"
+                    <input
+                      class="visually-hidden"
                       type="checkbox"
                       name="slide-park"
                       id="slide-park"
@@ -248,7 +255,12 @@
                     >
                   </li>
                   <li class="attractions-form__item">
-                    <input class="visually-hidden "type="checkbox" name="red-rocks" id="red-rocks" />
+                    <input
+                      class="visually-hidden"
+                      type="checkbox"
+                      name="red-rocks"
+                      id="red-rocks"
+                    />
                     <label class="attractions-form__label" for="red-rocks"
                       >Красные скалы</label
                     >
@@ -258,8 +270,12 @@
             </div>
             <div class="form__item-wraper">
               <fieldset class="feedback-form form__item">
-                <legend class="form__legend feedback-form__legend">Опишите свои эмоции:</legend>
-                <label class="visually-hidden" for="review-text">Текст отзыва</label>
+                <legend class="form__legend feedback-form__legend">
+                  Опишите свои эмоции:
+                </legend>
+                <label class="visually-hidden" for="review-text"
+                  >Текст отзыва</label
+                >
                 <textarea
                   class="feedback-form__textarea"
                   name="review-text"

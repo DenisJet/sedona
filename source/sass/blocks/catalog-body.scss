@@ -15,20 +15,18 @@
 
 .catalog-body__image {
   width: 100%;
-  min-height: 160px;
+  height: auto;
   background-color: $basic-blue;
-  background-image: url("../../img/header-form-triangle-mobile.svg"),
-    url("../../img/header-image-form-mobile.jpg");
+  background-image: url("../../img/header-form-triangle.svg"),
+    url("../../img/header-image-form.jpg");
   background-position: center bottom, center center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto, cover;
   text-align: center;
 
-  @media (min-width: $tablet-width) {
-    min-height: 295px;
-    background-image: url("../../img/header-form-triangle-tablet.svg"),
-      url("../../img/header-image-form-teablet.jpg");
-    background-size: auto;
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/header-form-triangle.svg"),
+      url("../../img/header-image-form@2x.jpg");
   }
 }
 
@@ -36,20 +34,10 @@
   margin-top: 54px;
   margin-bottom: 67px;
 
-  &--mobile {
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
-  &--tablet {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: inline-block;
-      margin-top: 100px;
-      margin-bottom: 120px;
-    }
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    margin-top: 100px;
+    margin-bottom: 120px;
   }
 }
 

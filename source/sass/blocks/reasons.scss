@@ -167,12 +167,24 @@
   & .reasons__wrap::after {
     background-image: url("../../img/city-image-mobile.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/city-image-mobile@2x.jpg");
+    }
+
     @media (min-width: $tablet-width) {
       background-image: url("../../img/city-image-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/city-image-tablet@2x.jpg");
+      }
     }
 
     @media (min-width: $desktop-width) {
       background-image: url("../../img/city-image-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/city-image-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -181,12 +193,24 @@
   & .reasons__wrap::after {
     background-image: url("../../img/bridge-image-mobile.jpg");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/bridge-image-mobile@2x.jpg");
+    }
+
     @media (min-width: $tablet-width) {
       background-image: url("../../img/bridge-image-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/bridge-image-tablet@2x.jpg");
+      }
     }
 
     @media (min-width: $desktop-width) {
-      background-image: url("../../img/bridge-image-desktop.svg");
+      background-image: url("../../img/bridge-image-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/brige-image-desktop@2x.jpg");
+      }
     }
   }
 }
