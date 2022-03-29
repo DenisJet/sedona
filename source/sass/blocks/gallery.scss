@@ -4,22 +4,25 @@
   max-width: 458px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 12px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 60px;
+    margin-bottom: 75px;
+  }
 
-    @media (min-width: $desktop-width) {
-      margin-bottom: 67px;
-    }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 78px;
   }
 }
 
 .gallery__header .header__title {
+  margin-bottom: 27px;
+
   @media (min-width: $tablet-width) {
     font-size: 30px;
+    margin-bottom: 33px;
   }
 }
 
@@ -35,6 +38,6 @@
   @media (min-width: $desktop-width) {
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 63px;
+    margin-bottom: 60px;
   }
 }

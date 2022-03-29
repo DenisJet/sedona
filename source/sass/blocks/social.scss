@@ -18,4 +18,16 @@
   height: 48px;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    background-color: $button-down-color;
+  }
+
+  &:active .social__icon {
+    opacity: 0.3;
+  }
 }

@@ -13,7 +13,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 60px;
     padding-right: 60px;
-    margin-bottom: 58px;
+    margin-bottom: 60px;
   }
 }
 
@@ -21,12 +21,6 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-
-  @media (min-width: $mobile-width) and (max-width: $mobile-width-only) {
-    width: 225px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -52,28 +46,39 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 62px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
 }
 
 .attractions-form__item:nth-child(odd) {
   @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
-    padding-left: 100px;
+    padding-left: 95px;
+  }
+}
+
+.attractions-form__item:nth-child(even) {
+  @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+    padding-left: 30px;
   }
 }
 
 .attractions-form__label {
   @include font(bold, 18px, 26px, $basic-black);
   position: relative;
-  padding-left: 76px;
+  padding-left: 78px;
 
   &::before {
     position: absolute;
     content: "";
     cursor: pointer;
-    width: 46px;
-    height: 46px;
-    top: -50%;
+    width: 53px;
+    height: 53px;
+    top: -65%;
     left: 0;
     background-color: $form-element-basic-color;
+    border-radius: 5px;
   }
 }
 
@@ -83,7 +88,19 @@
   width: 24px;
   height: 24px;
   top: 2px;
-  left: 13px;
-  background-image: url("../../img/checkbox-tick.svg");
+  left: 15px;
+  background-image: url("../../img/sprite.svg#checkbox-tick");
   background-repeat: no-repeat;
+}
+
+.attractions-form__item input:hover + .attractions-form__label::before {
+  background-color: $form-element-hover-color;
+}
+
+.attractions-form__item input:active + .attractions-form__label::before {
+  background-color: $form-element-down-color;
+}
+
+.attractions-form__item input:active + .attractions-form__label::after {
+  opacity: 0.3;
 }

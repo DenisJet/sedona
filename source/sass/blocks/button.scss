@@ -7,4 +7,16 @@
   border: none;
   background-color: $basic-blue;
   padding: 16px 32px 16px 32px;
+
+  &:hover {
+    background-color: $button-hover-color;
+  }
+
+  &:active {
+    background-color: $button-down-color;
+  }
+
+  &:active .button__text {
+    opacity: 0.3;
+  }
 }

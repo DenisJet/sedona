@@ -1,17 +1,26 @@
 .city-advantages__list {
   list-style-type: none;
-  padding: 35px 0;
+  padding: 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 80px;
   }
 }
 
 .city-advantages__item:not(:last-child) {
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
@@ -22,11 +31,12 @@
   @include font(bold, 18px, 26px, $basic-black);
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   @media (min-width: $tablet-width) {
     text-align: center;
     font-size: 21px;
+    margin-bottom: 22px;
   }
 }
 
@@ -65,37 +75,37 @@
   &--housing::before {
     width: 39px;
     height: 37px;
-    background-image: url("../../img/city-advantages-housing-mobile.svg");
+    background-image: url("../../img/sprite.svg#housing-mobile");
 
     @media (min-width: $tablet-width) {
       width: 75px;
       height: 72px;
-      background-image: url("../../img/city-advantages-housing-tablet.svg");
+      background-image: url("../../img/sprite.svg#housing-tablet");
     }
   }
 
   &--souvenirs::before {
     width: 32px;
     height: 38px;
-    background-image: url("../../img/city-advantages-souvenirs-mobile.svg");
+    background-image: url("../../img/sprite.svg#souvenirs-mobile");
 
     @media (min-width: $tablet-width) {
       width: 64px;
       height: 75px;
-      background-image: url("../../img/city-advantages-souvenirs-tablet.svg");
+      background-image: url("../../img/sprite.svg#souvenirs-tablet");
     }
   }
 
   &--food::before {
     width: 40px;
     height: 35px;
-    background-image: url("../../img/city-advantages-food-mobile.svg");
+    background-image: url("../../img/sprite.svg#food-mobile");
 
     @media (min-width: $tablet-width) {
       width: 76px;
       height: 68px;
       top: 7px;
-      background-image: url("../../img/city-advantages-food-tablet.svg");
+      background-image: url("../../img/sprite.svg#food-tablet");
     }
   }
 }

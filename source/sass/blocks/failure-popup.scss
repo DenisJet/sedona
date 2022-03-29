@@ -1,0 +1,52 @@
+.failure-popup {
+  width: 320px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+  background-color: $basic-white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  margin: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
+}
+
+.failure-popup__title {
+  @include font(bold, 18px, 26px, $basic-black);
+  text-align: center;
+  text-transform: uppercase;
+  width: 237px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.failure-popup__text {
+  @include font(normal, 14px, 24px, $basic-black);
+  text-align: center;
+  text-transform: uppercase;
+  width: 237px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 307px;
+    margin-bottom: 25px;
+  }
+}
+
+.failure-popup__button {
+  display: block;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}

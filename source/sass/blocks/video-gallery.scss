@@ -4,16 +4,17 @@
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 33px;
+  margin-bottom: 30px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 67px;
+    margin-bottom: 77px;
   }
 }
 
 .video-gallery__header .header__title {
   @media (min-width: $tablet-width) {
     font-size: 30px;
+    margin-bottom: 33px;
   }
 }
 

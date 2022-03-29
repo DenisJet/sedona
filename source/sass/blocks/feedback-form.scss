@@ -25,8 +25,20 @@
     @include font (bold, 18px, 26px, $basic-black);
   }
 
+  height: 160px;
   background-color: $form-element-basic-color;
   border: none;
   padding: 15px 22px 27px 22px;
   width: 100%;
+  outline: none;
+
+  &:hover {
+    background-color: $form-element-hover-color;
+  }
+
+  &:focus {
+    background-color: $basic-white;
+    outline: solid 4px  $form-element-hover-color;
+    outline-offset: -4px;
+  }
 }

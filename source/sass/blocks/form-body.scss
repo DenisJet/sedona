@@ -43,13 +43,18 @@
 }
 
 .form-body__image-title {
-  margin-top: 54px;
-  margin-bottom: 67px;
+  margin-top: 53px;
+  margin-bottom: 63px;
 
   @media (min-width: $tablet-width) {
     display: inline-block;
+    margin-top: 95px;
+    margin-bottom: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin-top: 100px;
-    margin-bottom: 120px;
+    margin-bottom: 117px;
   }
 }
 
@@ -66,5 +71,23 @@
     padding-left: 120px;
     padding-right: 120px;
     margin-bottom: 65px;
+  }
+}
+
+.form-body__footer {
+  min-width: 320px;
+  height: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1200px;
   }
 }

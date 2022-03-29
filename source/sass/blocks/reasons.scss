@@ -1,6 +1,6 @@
 .reasons__header {
   margin-bottom: 10px;
-  max-width: 520px;
+  max-width: 580px;
   margin-left: auto;
   margin-right: auto;
 
@@ -18,7 +18,7 @@
   text-align: center;
   padding-top: 25px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
 
   @include font(bold, 18px, 26px, $basic-black);
 
@@ -29,6 +29,10 @@
   @media (min-width: $tablet-width) {
     padding-top: 42px;
     font-size: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
   }
 }
 
@@ -42,12 +46,16 @@
   text-transform: uppercase;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   @include font(normal, 14px, 21px, $light-black);
 
   &--white {
     color: $basic-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
   }
 }
 
@@ -116,11 +124,11 @@
   background-color: $basic-blue;
 }
 
-.reasons__item--gray .reasons__description {
+.reasons__item--gray {
   background-color: $basic-gray;
 }
 
-.reasons__item--gray .reasons__text:not(.reasons__item--gray:last-child .reasons__text) {
+.reasons__item--gray .reasons__description:not(.reasons__item--gray:last-child .reasons__description) {
   border-bottom: solid 1px $dark-gray;
 
   @media (min-width: $tablet-width) {
@@ -190,6 +198,12 @@
 }
 
 .reasons__item:nth-child(2) {
+  & .reasons__description {
+    @media (min-width: $tablet-width) {
+      grid-column: -1 / -2;
+    }
+  }
+
   & .reasons__wrap::after {
     background-image: url("../../img/bridge-image-mobile.jpg");
 
@@ -199,6 +213,7 @@
 
     @media (min-width: $tablet-width) {
       background-image: url("../../img/bridge-image-tablet.jpg");
+      grid-column: 1 / -2;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/bridge-image-tablet@2x.jpg");

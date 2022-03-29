@@ -5,6 +5,7 @@
 .login-form__legend {
   text-align: center;
   margin-bottom: 20px;
+  padding: o;
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -35,7 +36,7 @@
       width: 216px;
     }
 
-    @media (min-width: 1040px) {
+    @media (min-width: 1100px) {
       width: 350px;
     }
   }
@@ -47,7 +48,7 @@
       width: 178px;
     }
 
-    @media (min-width: 1040px) {
+    @media (min-width: 1100px) {
       width: 312px;
     }
   }
@@ -59,7 +60,7 @@
       width: 180px;
     }
 
-    @media (min-width: 1040px) {
+    @media (min-width: 1100px) {
       width: 314px;
     }
   }

@@ -8,8 +8,19 @@
   background-color: $form-element-basic-color;
   padding: 18px 22px 14px 22px;
   border: none;
+  outline: none;
 
   &::placeholder {
     @include font(bold, 18px, 26px, $basic-black);
+  }
+
+  &:hover {
+    background-color: $form-element-hover-color;
+  }
+
+  &:focus {
+    background-color: $basic-white;
+    outline: solid 4px  $form-element-hover-color;
+    outline-offset: -4px;
   }
 }
