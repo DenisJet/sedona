@@ -1,3 +1,7 @@
+.field .error {
+  border: 2px solid $error-color;
+}
+
 .field__label {
   @include font(normal, 14px, 26px, $light-black);
   text-transform: uppercase;

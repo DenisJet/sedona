@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>HTML Academy: Sedona</title>
     <link
       rel="apple-touch-icon"
@@ -28,6 +28,20 @@
       rel="mask-icon"
       href="img/favicons/safari-pinned-tab.svg"
       color="#5bbad5"
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsansbold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <meta name="msapplication-TileColor" content="#1b0c67" />
     <meta name="theme-color" content="#ffffff" />
@@ -207,6 +221,21 @@
                 <a class="photo-item__link" href="">
                   <picture>
                     <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/road-north-tablet.webp    1x,
+                        img/road-north-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/road-north-mobile.webp 1x,
+                        img/road-north-mobile@2x   2x
+                      "
+                    />
+                    <source
                       media="(min-width: 768px"
                       )
                       srcset="
@@ -237,6 +266,21 @@
               <li class="photo-item photo-gallery__item">
                 <a class="photo-item__link" href="">
                   <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px)"
+                      srcset="
+                        img/devil's-bridge-tablet.webp    1x,
+                        img/devil's-bridge-tablet@2x.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/devil's-bridge-mobile.webp    1x,
+                        img/devil's-bridge-mobile@2x.webp 2x
+                      "
+                    />
                     <source
                       media="(min-width: 768px)"
                       srcset="
@@ -297,10 +341,12 @@
                       width="16"
                       height="20"
                       viewBox="0 0 16 20"
-                      fill="none"
+                      fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <use xlink:href="img/sprite.svg#button-replay"></use>
+                      <use
+                        xlink:href="img/video-buttons-sprite.svg#replay"
+                      ></use>
                     </svg>
                   </div>
                   <div class="video-item__button video-item__button--subtitle">
@@ -308,10 +354,12 @@
                       width="32"
                       height="20"
                       viewBox="0 0 32 20"
-                      fill="none"
+                      fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <use xlink:href="img/sprite.svg#button-subtitle"></use>
+                      <use
+                        xlink:href="img/video-buttons-sprite.svg#subtitles"
+                      ></use>
                     </svg>
                   </div>
                   <div
@@ -321,10 +369,12 @@
                       width="20"
                       height="20"
                       viewBox="0 0 20 20"
-                      fill="none"
+                      fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <use xlink:href="img/sprite.svg#button-fullscreen"></use>
+                      <use
+                        xlink:href="img/video-buttons-sprite.svg#fullscreen"
+                      ></use>
                     </svg>
                   </div>
                 </div>
@@ -405,21 +455,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      let navMain = document.querySelector(".main-nav");
-      let navToggle = document.querySelector(".main-nav__toggle");
-
-      navMain.classList.remove("main-nav--nojs");
-
-      navToggle.addEventListener("click", function () {
-        if (navMain.classList.contains("main-nav--closed")) {
-          navMain.classList.remove("main-nav--closed");
-          navMain.classList.add("main-nav--opened");
-        } else {
-          navMain.classList.remove("main-nav--opened");
-          navMain.classList.add("main-nav--closed");
-        }
-      });
-    </script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

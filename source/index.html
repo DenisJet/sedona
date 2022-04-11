@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>HTML Academy: Sedona</title>
     <link
       rel="apple-touch-icon"
@@ -28,6 +28,20 @@
       rel="mask-icon"
       href="img/favicons/safari-pinned-tab.svg"
       color="#5bbad5"
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/ptsansbold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <meta name="msapplication-TileColor" content="#1b0c67" />
     <meta name="theme-color" content="#ffffff" />
@@ -327,21 +341,6 @@
         </div>
       </footer>
     </div>
-    <script>
-      let navMain = document.querySelector(".main-nav");
-      let navToggle = document.querySelector(".main-nav__toggle");
-
-      navMain.classList.remove("main-nav--nojs");
-
-      navToggle.addEventListener("click", function () {
-        if (navMain.classList.contains("main-nav--closed")) {
-          navMain.classList.remove("main-nav--closed");
-          navMain.classList.add("main-nav--opened");
-        } else {
-          navMain.classList.remove("main-nav--opened");
-          navMain.classList.add("main-nav--closed");
-        }
-      });
-    </script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

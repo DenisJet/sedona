@@ -73,19 +73,11 @@
 
   &--phone {
     background-image: url("../../img/input-phone.svg"),
-      linear-gradient(
-        to left,
-        $contacts-input-element-color 58px,
-        transparent 58px
-      );
+      linear-gradient(to left, $contacts-input-element-color 58px, transparent 58px);
   }
 
   &--email {
     background-image: url("../../img/input-email.svg"),
-      linear-gradient(
-        to left,
-        $contacts-input-element-color 58px,
-        transparent 58px
-      );
+      linear-gradient(to left, $contacts-input-element-color 58px, transparent 58px);
   }
 }

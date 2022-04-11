@@ -117,62 +117,42 @@
 .video-item__button {
   cursor: pointer;
   height: 20px;
+  color: $mobile-video-controls-color;
+
+  @media (min-width: $tablet-width) {
+    color: $basic-white;
+  }
+
+  &:hover {
+    color: $light-black;
+
+    @media (min-width: $tablet-width) {
+      color: $basic-white;
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    color: $light-black;
+    opacity: 0.3;
+
+    @media (min-width: $tablet-width) {
+      color: $basic-white;
+    }
+  }
 }
 
 .video-item__button--replay {
   width: 16px;
   justify-self: start;
-  color: $mobile-video-controls-color;
-
-  @media (min-width: $tablet-width) {
-    color: $basic-white;
-  }
-
-  &:hover {
-    color: $light-black;
-
-    @media (min-width: $tablet-width) {
-      color: $basic-white;
-      opacity: 0.6;
-    }
-  }
-
-  &:active {
-    color: $light-black;
-    opacity: 0.3;
-
-    @media (min-width: $tablet-width) {
-      color: $basic-white;
-    }
-  }
 }
 
 .video-item__button--subtitle {
   width: 32px;
   grid-column: -2 / -3;
-  color: $mobile-video-controls-color;
 
   @media (min-width: $tablet-width) {
     margin-right: 31px;
-    color: $basic-white;
-  }
-
-  &:hover {
-    color: $light-black;
-
-    @media (min-width: $tablet-width) {
-      color: $basic-white;
-      opacity: 0.6;
-    }
-  }
-
-  &:active {
-    color: $light-black;
-    opacity: 0.3;
-
-    @media (min-width: $tablet-width) {
-      color: $basic-white;
-    }
   }
 }
 
@@ -180,27 +160,4 @@
   width: 20px;
   grid-column: -1 / -2;
   justify-self: end;
-  color: $mobile-video-controls-color;
-
-  @media (min-width: $tablet-width) {
-    color: $basic-white;
-  }
-
-  &:hover {
-    color: $light-black;
-
-    @media (min-width: $tablet-width) {
-      color: $basic-white;
-      opacity: 0.6;
-    }
-  }
-
-  &:active {
-    color: $light-black;
-    opacity: 0.3;
-
-    @media (min-width: $tablet-width) {
-      color: $basic-white;
-    }
-  }
 }

@@ -4,6 +4,12 @@
   padding-top: 38px;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   margin: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+
 
   @media (min-width: $tablet-width) {
     width: 640px;
@@ -52,4 +58,8 @@
 
 .success-popup__button {
   width: 100%;
+}
+
+.success-popup--show {
+  display: block;
 }
